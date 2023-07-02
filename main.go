@@ -36,6 +36,10 @@ func anotherRequest() {
 	resp, err := http.Get("http://amazon.com")
 
 	if err != nil {
-		
+		fmt.Println(err)
 	}
+
+	lw := logWriter{}
+	
+	io.Copy(lw, resp.Body)
 }
