@@ -32,3 +32,10 @@ func (logWriter) Write(bs []byte) (int, error) {
 	return len(bs), nil
 }
 
+func anotherRequest() {
+	resp, err := http.Get("http://amazon.com")
+
+	if err != nil {
+		
+	}
+}
